@@ -4,6 +4,7 @@ import './App.css';
 import DownshiftOne from './DownshiftOne';
 import DownshiftTwo from './DownshiftTwo';
 import DownshiftThree from './DownshiftThree';
+import DownshiftFour from './DownshiftFour';
 
 class App extends Component {
 
@@ -17,6 +18,7 @@ class App extends Component {
         <DownshiftOne />
         <DownshiftTwo />
         <DownshiftThree />
+        <DownshiftFour />
       </div>
     );
   }
