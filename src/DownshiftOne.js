@@ -15,7 +15,7 @@ export default ({ items, onChange }) => {
                   .map((item, index) => (
                     <div
                       className="dropdown-item"
-                      {...getItemProps({ key: item.name, index, item, })}
+                      {...getItemProps({ key: item.name, index, item })}
                       style={{
                         backgroundColor: highlightedIndex === index ? 'lightgray' : 'white',
                         fontWeight: selectedItem === item ? 'bold' : 'normal',

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import DownshiftOne from './DownshiftOne';
+import DownshiftTwo from './DownshiftTwo';
 
 class App extends Component {
   constructor(props) {
@@ -28,6 +29,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <DownshiftOne items={this.books} onChange={this.onChangeOne} />
+        <DownshiftTwo />
       </div>
     );
   }
