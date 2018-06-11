@@ -53,3 +53,10 @@ input {
   font-size: 1rem;
   text-align: left;
 }
+
+.dropdown-button {
+  padding: 0.6rem;
+  border-radius: 3px;
+  background: white;
+  cursor: pointer;
+}

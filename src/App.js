@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import DownshiftOne from './DownshiftOne';
 import DownshiftTwo from './DownshiftTwo';
+import DownshiftThree from './DownshiftThree';
 
 class App extends Component {
 
@@ -15,6 +16,7 @@ class App extends Component {
         </header>
         <DownshiftOne />
         <DownshiftTwo />
+        <DownshiftThree />
       </div>
     );
   }
