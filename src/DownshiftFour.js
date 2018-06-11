@@ -19,30 +19,26 @@ export default class DownshiftFour extends Component {
         { name: 'Gringo' },
         { name: 'Black Panther' },
       ],
-      favouriteBook: '',
-      favouriteMovie: ''
+      book: '',
+      movie: ''
     }
 
     this.onSubmit = this.onSubmit.bind(this);
-    this.onBookChange = this.onBookChange.bind(this);
-    this.onMovieChange = this.onMovieChange.bind(this);
+    this.onChange = this.onChange.bind(this);
   }
 
   onSubmit(event) {
     event.preventDefault();
     alert(`
-    Movie: ${this.state.favouriteMovie}
-    Book: ${this.state.favouriteBook}
+    Favourite book: ${this.state.book}
+    Favourite movie: ${this.state.movie}
     has been submitted
     `)
   }
 
-  onBookChange(selectedBook) {
-    this.setState({ favouriteBook: selectedBook.name })
-  }
-
-  onMovieChange(selectedMovie) {
-    this.setState({ favouriteMovie: selectedMovie.name })
+  onChange(selectedBook, stateHelpers) {
+    const element = document.querySelector(`#${stateHelpers.id}-input`)
+    this.setState({ [element.name]: selectedBook.name })
   }
 
   render() {
@@ -50,14 +46,16 @@ export default class DownshiftFour extends Component {
       <form onSubmit={this.onSubmit}>
         <DownshiftInputField
           books={this.state.books}
-          onChange={this.onBookChange}
+          onChange={this.onChange}
           label="Select your favourite book"
+          name="book"
           placeholder="Search your favourite book" />
 
         <DownshiftInputField
           books={this.state.movies}
-          onChange={this.onMovieChange}
+          onChange={this.onChange}
           label="Select your favourite movie"
+          name="movie"
           placeholder="Search your favourite movie" />
 
         <input type="submit" value="Submit" className="dropdown-button" />
