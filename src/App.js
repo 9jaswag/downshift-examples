@@ -5,21 +5,6 @@ import DownshiftOne from './DownshiftOne';
 import DownshiftTwo from './DownshiftTwo';
 
 class App extends Component {
-  constructor(props) {
-    super(props)
-    this.books = [
-      { name: 'Harry Potter' },
-      { name: 'Net Moves' },
-      { name: 'Half of a yellow sun' },
-      { name: 'The Da Vinci Code' },
-      { name: 'Born a crime' },
-    ]
-
-  }
-
-  onChangeOne(selectedBook) {
-    alert(`your favourite book is ${selectedBook.name}`)
-  }
 
   render() {
     return (
@@ -28,7 +13,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <DownshiftOne items={this.books} onChange={this.onChangeOne} />
+        <DownshiftOne />
         <DownshiftTwo />
       </div>
     );

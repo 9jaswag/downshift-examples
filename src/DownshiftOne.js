@@ -1,16 +1,29 @@
 import React from 'react'
 import Downshift from 'downshift';
 
-export default ({ items, onChange }) => {
+const books = [
+  { name: 'Harry Potter' },
+  { name: 'Net Moves' },
+  { name: 'Half of a yellow sun' },
+  { name: 'The Da Vinci Code' },
+  { name: 'Born a crime' },
+];
+
+const onChange = (selectedBook) => {
+  alert(`your favourite book is ${selectedBook.name}`)
+}
+
+export default () => {
   return (
-    <Downshift onChange={onChange} itemToString={item => (item ? item.name : '')}>
+    <Downshift onChange={onChange} itemToString={books => (books ? books.name : '')}>
       {({ getInputProps, getItemProps, isOpen, inputValue, highlightedIndex, selectedItem, highlightedItem, getLabelProps }) => (
         <div>
+          <label style={{ marginTop: '1rem', display: 'block' }} {...getLabelProps()}>Choose your favourite book</label> <br />
           <input {...getInputProps({ placeholder: "Search books" })} />
           {isOpen ? (
             <div className="downshift-dropdown">
               {
-                items
+                books
                   .filter(item => !inputValue || item.name.includes(inputValue))
                   .map((item, index) => (
                     <div

@@ -34,8 +34,9 @@ export default class DownshiftTwo extends Component {
   render() {
     return (
       <Downshift onChange={this.downshiftOnChange} itemToString={item => (item ? item.title : '')}>
-        {({ selectedItem, getInputProps, getItemProps, highlightedIndex, isOpen, inputValue }) => (
+        {({ selectedItem, getInputProps, getItemProps, highlightedIndex, isOpen, inputValue, getLabelProps }) => (
           <div>
+            <label style={{ marginTop: '1rem', display: 'block' }} {...getLabelProps()}>Choose your favourite movie</label> <br />
             <input {...getInputProps({
               placeholder: "Search movies",
               onChange: this.inputOnChange
