@@ -24,7 +24,7 @@ export default () => {
             <div className="downshift-dropdown">
               {
                 books
-                  .filter(item => !inputValue || item.name.includes(inputValue))
+                  .filter(item => !inputValue || item.name.toLowerCase().includes(inputValue.toLowerCase()))
                   .map((item, index) => (
                     <div
                       className="dropdown-item"

@@ -45,7 +45,7 @@ export default class DownshiftTwo extends Component {
               <div className="downshift-dropdown">
                 {
                   this.state.movies
-                    .filter(item => !inputValue || item.title.includes(inputValue))
+                    .filter(item => !inputValue || item.title.toLowerCase().includes(inputValue.toLowerCase()))
                     .slice(0, 10)
                     .map((item, index) => (
                       <div

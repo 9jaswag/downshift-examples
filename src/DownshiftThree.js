@@ -1,54 +1,6 @@
 import React, { Component } from 'react'
 import Downshift from 'downshift';
 
-// const books = [
-//   { name: 'Harry Potter' },
-//   { name: 'Net Moves' },
-//   { name: 'Half of a yellow sun' },
-//   { name: 'The Da Vinci Code' },
-//   { name: 'Born a crime' },
-// ];
-
-// let selectedItem = books[0].name;
-
-// const onChange = (selectedBook) => {
-//   selectedItem = selectedBook.name;
-//   alert(`your favourite book is ${selectedBook.name}`)
-// }
-
-// export default () => {
-//   return (
-//     <Downshift onChange={onChange} selectedItem={selectedItem} itemToString={books => (books ? books.name : '')}>
-//       {({ isOpen, getToggleButtonProps, getItemProps, highlightedIndex, selectedItem: dsSelectedItem }) => (
-//         <div>
-//           <button className="dropdown-button" {...getToggleButtonProps()}>
-//             {selectedItem ? selectedItem : 'Select an item ...'}
-//           </button>
-//           <div style={{ position: 'relative' }}>
-//             {isOpen ? (
-//               <div className="downshift-dropdown">
-//                 {
-//                   books.map((item, index) => (
-//                     <div
-//                       className="dropdown-item"
-//                       {...getItemProps({ key: index, index, item })}
-//                       style={{
-//                         backgroundColor: highlightedIndex === index ? 'lightgray' : 'white',
-//                         fontWeight: dsSelectedItem === item ? 'bold' : 'normal',
-//                       }}>
-//                       {item.name}
-//                     </div>
-//                   ))
-//                 }
-//               </div>
-//             ) : null}
-//           </div>
-//         </div>
-//       )}
-//     </Downshift>
-//   )
-// }
-
 export default class DownshiftThree extends Component {
   constructor(props) {
     super(props)
