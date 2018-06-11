@@ -7,12 +7,17 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.books = [
-      { name: '' },
-      { name: 'pear' },
-      { name: 'orange' },
-      { name: 'grape' },
-      { name: 'banana' },
+      { name: 'Harry Potter' },
+      { name: 'Net Moves' },
+      { name: 'Half of a yellow sun' },
+      { name: 'The Da Vinci Code' },
+      { name: 'Born a crime' },
     ]
+
+  }
+
+  onChangeOne(selectedBook) {
+    alert(`your favourite book is ${selectedBook.name}`)
   }
 
   render() {
@@ -22,7 +27,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <DownshiftOne />
+        <DownshiftOne items={this.books} onChange={this.onChangeOne} />
       </div>
     );
   }

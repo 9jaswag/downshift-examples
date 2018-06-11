@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
 .App {
   text-align: center;
 }
@@ -25,4 +31,25 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+input {
+  margin: 2rem;
+  width: 20rem;
+  padding: 1rem .5rem;
+}
+
+.downshift-dropdown {
+  margin: 0 auto;
+  width: 20rem;
+  border: 1px solid whitesmoke;
+  border-bottom: none;
+}
+
+.dropdown-item {
+  padding: 0.5rem;
+  cursor: pointer;
+  border-bottom: 1px solid whitesmoke;
+  font-size: 1rem;
+  text-align: left;
 }
