@@ -36,8 +36,8 @@ export default class DownshiftFour extends Component {
     `)
   }
 
-  onChange(selectedBook, stateHelpers) {
-    const element = document.querySelector(`#${stateHelpers.id}-input`)
+  onChange(selectedBook, stateAndHelpers) {
+    const element = document.querySelector(`#${stateAndHelpers.id}-input`)
     this.setState({ [element.name]: selectedBook.name })
   }
 
@@ -45,14 +45,14 @@ export default class DownshiftFour extends Component {
     return (
       <form onSubmit={this.onSubmit}>
         <DownshiftInputField
-          books={this.state.books}
+          items={this.state.books}
           onChange={this.onChange}
           label="Select your favourite book"
           name="book"
           placeholder="Search your favourite book" />
 
         <DownshiftInputField
-          books={this.state.movies}
+          items={this.state.movies}
           onChange={this.onChange}
           label="Select your favourite movie"
           name="movie"

@@ -1,9 +1,9 @@
 import React from 'react'
 import Downshift from 'downshift';
 
-export default ({ books, onChange, label, placeholder, name }) => {
+export default ({ items, onChange, label, placeholder, name }) => {
   return (
-    <Downshift onChange={onChange} itemToString={books => (books ? books.name : '')}>
+    <Downshift onChange={onChange} itemToString={items => (items ? items.name : '')}>
       {({ getInputProps, getItemProps, isOpen, inputValue, highlightedIndex, selectedItem, getLabelProps }) => (
         <div>
           <label style={{ marginTop: '1rem', display: 'block' }} {...getLabelProps()}>{label}</label> <br />
@@ -11,7 +11,7 @@ export default ({ books, onChange, label, placeholder, name }) => {
           {isOpen ? (
             <div className="downshift-dropdown">
               {
-                books
+                items
                   .filter(item => !inputValue || item.name.toLowerCase().includes(inputValue.toLowerCase()))
                   .map((item, index) => (
                     <div
